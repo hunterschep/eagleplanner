@@ -1,0 +1,65 @@
+/* Base styles */
+.header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative; /* Added for absolute positioning context */
+  }
+  
+  .menuIcon {
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 1; /* Ensures it's above other items */
+  }
+  
+  
+  /* Hide menu items by default on mobile */
+  .navItems {
+    display: none;
+    width: 100%; /* Ensures full width on mobile */
+  }
+  
+  /* Show menu items when isOpen is true */ 
+/* Show menu items when isOpen is true */
+.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    align-items: center; /* Center items horizontally in the flex container */
+    z-index: 1;
+  }
+  
+  .show .navItem {
+    padding: 10px 0; /* Add padding to space out the items */
+    text-align: center; /* Center the text of each nav item */
+    width: 100%; /* Full width to each item */
+  }
+  
+  .navItem {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 20px;
+  }
+
+  /* Responsive styling */
+  @media (min-width: 768px) {
+    .menuIcon {
+      display: none;
+    }
+  
+    .navItems {
+      display: flex;
+      justify-content: center;
+      position: static; /* Reset positioning */
+      flex-direction: row;
+    }
+  }
+  

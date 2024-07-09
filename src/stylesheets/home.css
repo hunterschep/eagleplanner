@@ -1,0 +1,121 @@
+.mainContainer {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    background: linear-gradient(to bottom, #D24040, #140118);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+  }
+  
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  /* Responsive image */
+  .box img {
+    max-width: 80%; /* Ensures image is never more than 100% of its container */
+    height: auto; /* Maintains aspect ratio */
+  }
+  
+  /* Responsive text sizes */
+  .box1 {
+    font-size: 2rem; /* Adjust as necessary */
+  }
+  
+  .box1 p {
+    font-size: 1.5rem; /* Adjust as necessary */
+    margin-top: -20px;
+  }
+  
+
+  /* Button styling */
+.button {
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    border: none; /* No border */
+    padding: 15px 35px; /* Padding for size */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem; /* Adjust size as needed */
+    font-weight: 700;
+    cursor: pointer; /* Change cursor to signify clickable */
+    border-radius: 10px; /* Large border radius for round effect */
+    transition-duration: 0.4s; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover effect */
+  .button:hover {
+    background-color: grey; /* Grey background on hover */
+  }
+
+  .desktopImage {
+    display: block;
+  }
+  
+  .mobileImage {
+    display: none; /* Hide mobile image by default */
+  }
+  
+  
+  /* Adjust box 2 and 3 to be side by side on larger screens, closer together */
+  @media (min-width: 768px) {
+  
+    .middleRow {
+      width: 100%;
+    }
+
+    .desktopImage {
+        display: block; /* Hide desktop image */
+    }
+    
+    .mobileImage {
+        display: none;
+    }
+  }
+
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .mainContainer {
+      flex-direction: column; /* Stack boxes vertically */
+    }
+
+    .button {
+      font-size: 1.2rem;;
+    }
+
+    .desktopImage {
+        display: none; /* Hide desktop image on smaller screens */
+    }
+    
+    .mobileImage {
+        display: block; /* Show mobile image on smaller screens */
+    }
+    
+  }
+
+  /* More fine-tuned media queries */
+@media (max-width: 600px) {
+    .box {
+      padding: 10px; /* Less padding on very small screens */
+    }
+  
+    .box1 {
+      font-size: 1.8rem; /* Smaller title font on very small screens */
+    }
+  
+    .box1 p, .box2 p {
+      font-size: 1.2rem; /* Smaller text on very small screens */
+    }
+  
+    .button {
+      padding: 8px 16px; /* Smaller button on very small screens */
+      font-size: 1.0rem; /* Smaller font on very small screens */
+    }
+  }

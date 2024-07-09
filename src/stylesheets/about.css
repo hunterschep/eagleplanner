@@ -1,0 +1,48 @@
+.aboutContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+.card .p {
+    font-family: 'Inter', sans-serif;
+}
+
+.card {
+    width: 70%; /* Adjusted for full width on smaller screens */
+    max-width: 300px; /* Maximum width for larger screens */
+    min-height: 250px; /* Minimum height */
+    padding: 20px;
+    margin: 20px;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .aboutContainer {
+        flex-direction: column;
+    }
+    .card {
+        width: 80%; /* Adjust width on smaller screens */
+        min-height: 200px; /* Adjust minimum height on smaller screens */
+    }
+}
